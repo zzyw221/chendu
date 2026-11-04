@@ -1,0 +1,28 @@
+/* 旅行攻略页专属样式 */
+.travel-hero { background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85"); }
+.travel-section { padding-bottom: 78px; }
+.guide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.guide-card { position: relative; min-height: 260px; padding: 28px 30px; border: 1px solid rgba(201,169,110,.2); border-radius: 4px; background: var(--surface); }
+.guide-icon { position: absolute; top: 24px; right: 28px; color: var(--gold); font-family: var(--serif); font-size: 27px; }
+.guide-label { color: var(--gold); font-size: 9px; letter-spacing: .16em; }
+.guide-card h3 { margin: 10px 0 12px; font-family: var(--serif); font-size: 22px; font-weight: 400; }
+.guide-card > p { max-width: 520px; margin: 0; color: var(--muted); font-size: 12px; line-height: 2; }
+.guide-card ul { display: flex; flex-direction: column; gap: 10px; margin: 14px 0 0; padding: 0; list-style: none; }
+.guide-card li { display: grid; grid-template-columns: 126px 1fr; gap: 8px; align-items: start; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.guide-card li b { color: #e0ddd3; font-weight: 400; }
+.season-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.season-tags span { padding: 5px 10px; border: 1px solid var(--line); color: var(--gold-light); font-size: 10px; }
+.budget-note { margin-top: 18px; padding: 10px 12px; border-left: 2px solid var(--gold); background: rgba(201,169,110,.08); color: #d3c6aa; font-size: 11px; }
+.tip-banner { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-bottom: 100px; padding: 46px 54px; border: 1px solid var(--gold); background: linear-gradient(110deg, rgba(201,169,110,.17), rgba(201,169,110,.04)); }
+.tip-banner h2 { margin: 8px 0 6px; font-family: var(--serif); font-size: clamp(26px, 3.5vw, 38px); font-weight: 400; }
+.tip-banner p { margin: 0; color: var(--muted); font-size: 13px; }
+.tip-banner .button { flex: 0 0 auto; }
+@media (max-width: 760px) {
+  .guide-grid { grid-template-columns: 1fr; }
+  .guide-card { min-height: 0; padding: 24px; }
+  .guide-card li { grid-template-columns: 110px 1fr; }
+  .tip-banner { align-items: flex-start; flex-direction: column; margin-bottom: 70px; padding: 30px 24px; }
+}
+@media (max-width: 420px) {
+  .guide-card li { grid-template-columns: 1fr; gap: 2px; }
+}

@@ -1,0 +1,30 @@
+/* 景点页专属样式 */
+.sights-hero { background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2000&q=85"); }
+.sights-section { padding-bottom: 76px; }
+.sight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.sight-card { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 230px; overflow: hidden; border: 1px solid rgba(201,169,110,.2); border-radius: 4px; background: var(--surface); transition: transform .25s ease, box-shadow .25s ease; }
+.sight-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(0,0,0,.26); }
+.sight-card > img { width: 100%; height: 100%; min-height: 230px; object-fit: cover; background: var(--surface-raised); }
+.sight-copy { display: flex; flex-direction: column; align-items: flex-start; padding: 22px 20px; }
+.sight-copy h3 { margin: 7px 0 6px; font-family: var(--serif); font-size: 20px; font-weight: 400; }
+.sight-copy p { margin: 0 0 12px; color: var(--muted); font-size: 11px; line-height: 1.9; }
+.sight-copy small { margin-top: auto; color: var(--gold-light); font-size: 10px; }
+.route-section { padding-top: 72px; border-top: 1px solid rgba(201,169,110,.14); }
+.route-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.route-grid article { min-height: 210px; padding: 28px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(201,169,110,.08), transparent 70%); }
+.route-grid article > span { color: var(--gold); font-size: 9px; letter-spacing: .16em; }
+.route-grid h3 { margin: 14px 0 10px; font-family: var(--serif); font-size: 21px; font-weight: 400; }
+.route-grid p { color: var(--gold-light); font-size: 12px; line-height: 1.8; }
+.route-grid small { color: var(--muted); font-size: 11px; }
+@media (max-width: 900px) {
+  .sight-grid { grid-template-columns: 1fr; }
+  .route-grid { grid-template-columns: 1fr 1fr; }
+  .route-grid article:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  .sight-card { grid-template-columns: 1fr; }
+  .sight-card > img { height: 210px; min-height: 0; }
+  .sight-copy { min-height: 190px; padding: 20px; }
+  .route-grid { grid-template-columns: 1fr; }
+  .route-grid article:last-child { grid-column: auto; }
+}
